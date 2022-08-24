@@ -89,7 +89,7 @@ This means you cannot use a directory that is located directly on the host Windo
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/onyxio/onyx.git
+    git clone https://github.com/ONYXcore/onyx.git
 
 Once the source code is ready the build steps are below:
 
@@ -99,7 +99,9 @@ Once the source code is ready the build steps are below:
     cd ..
     ./autogen.sh # not required when building from tarball
     CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
-    make
+    make -i
+	make clean
+	make -i
 
 ## Building for 32-bit Windows
 
@@ -117,7 +119,7 @@ This means you cannot use a directory that located directly on the host Windows 
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/onyxio/onyx.git
+    git clone https://github.com/ONYXcore/onyx.git
 
 Then build using:
 
@@ -127,7 +129,9 @@ Then build using:
     cd ..
     ./autogen.sh # not required when building from tarball
     CONFIG_SITE=$PWD/depends/i686-w64-mingw32/share/config.site ./configure --prefix=/
-    make
+    make -i
+	make clean
+	make -i
 
 ## Depends system
 

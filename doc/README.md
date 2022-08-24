@@ -5,7 +5,7 @@ Setup
 ---------------------
 onyx Core is the original onyx client and it builds the backbone of the network. It downloads and, by default, stores the entire history of onyx transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download onyx Core, visit [onyx.org](https://onyx.io/).
+To download onyx Core, visit [onyx.org](https://onyx.run/).
 
 Running
 ---------------------

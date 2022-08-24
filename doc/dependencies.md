@@ -15,16 +15,16 @@ These are the dependencies currently used by onyx Core. You can find instruction
 | GCC |  | [4.8+](https://gcc.gnu.org/) (C++11 support) |  |  |  |
 | HarfBuzz-NG |  |  |  |  |  |
 | libevent | [2.1.8-stable](https://github.com/libevent/libevent/releases) | 2.0.22 | No |  |  |
-| libjpeg |  |  |  |  | [Yes](https://github.com/onyxio/onyx/blob/master/depends/packages/qt.mk#L65) |
-| libpng |  |  |  |  | [Yes](https://github.com/onyxio/onyx/blob/master/depends/packages/qt.mk#L64) |
+| libjpeg |  |  |  |  | [Yes](https://github.com/ONYXcore/onyx/blob/master/depends/packages/qt.mk#L65) |
+| libpng |  |  |  |  | [Yes](https://github.com/ONYXcore/onyx/blob/master/depends/packages/qt.mk#L64) |
 | MiniUPnPc | [2.0.20180203](http://miniupnp.free.fr/files) |  | No |  |  |
 | OpenSSL | [1.0.1k](https://www.openssl.org/source) |  | Yes |  |  |
-| PCRE |  |  |  |  | [Yes](https://github.com/onyxio/onyx/blob/master/depends/packages/qt.mk#L66) |
+| PCRE |  |  |  |  | [Yes](https://github.com/ONYXcore/onyx/blob/master/depends/packages/qt.mk#L66) |
 | protobuf | [2.6.1](https://github.com/google/protobuf/releases) |  | No |  |  |
 | Python (tests) |  | [3.4](https://www.python.org/downloads) |  |  |  |
 | qrencode | [3.4.4](https://fukuchi.org/works/qrencode) |  | No |  |  |
 | Qt | [5.9.7](https://download.qt.io/official_releases/qt/) | [5.2] | No |  |  |
-| XCB |  |  |  |  | [Yes](https://github.com/onyxio/onyx/blob/master/depends/packages/qt.mk#L87) (Linux only) |
-| xkbcommon |  |  |  |  | [Yes](https://github.com/onyxio/onyx/blob/master/depends/packages/qt.mk#L86) (Linux only) |
+| XCB |  |  |  |  | [Yes](https://github.com/ONYXcore/onyx/blob/master/depends/packages/qt.mk#L87) (Linux only) |
+| xkbcommon |  |  |  |  | [Yes](https://github.com/ONYXcore/onyx/blob/master/depends/packages/qt.mk#L86) (Linux only) |
 | ZeroMQ | [4.2.5](https://github.com/zeromq/libzmq/releases) | 4.0.0 | No |  |  |
 | zlib | [1.2.11](https://zlib.net/) |  |  |  | No |

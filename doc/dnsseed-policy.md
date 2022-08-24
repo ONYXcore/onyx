@@ -46,4 +46,4 @@ situations but should be discussed in public in advance.
 
 See also
 ----------
-- [onyx-seeder](https://github.com/onyxio/onyx-seeder) is a reference implementation of a DNS seed.
+- [onyx-seeder](https://github.com/ONYXcore/onyx-seeder) is a reference implementation of a DNS seed.

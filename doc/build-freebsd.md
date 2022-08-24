@@ -30,7 +30,7 @@ See [dependencies.md](dependencies.md) for a complete overview.
 
 Download the source code:
 ```
-git clone https://github.com/onyxio/onyx
+git clone https://github.com/ONYXcore/onyx
 ```
 
 ## Building onyx Core

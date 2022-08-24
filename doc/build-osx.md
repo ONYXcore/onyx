@@ -43,7 +43,7 @@ Build onyx Core
 
 1. Clone the onyx Core source code:
 
-        git clone https://github.com/onyxio/onyx
+        git clone https://github.com/ONYXcore/onyx
         cd onyx
 
 2.  Build onyx Core:
