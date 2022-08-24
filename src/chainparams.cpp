@@ -55,13 +55,6 @@ void CChainParams::UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64
 /**
  * Main network
  */
-/**
- * What makes a good checkpoint block?
- * + Is surrounded by blocks with reasonable timestamps
- *   (no blocks before with a timestamp after, none after with
- *    timestamp before)
- * + Contains no strange transactions
- */
 
 class CMainParams : public CChainParams {
 public:
@@ -99,11 +92,7 @@ public:
 
         consensus.defaultAssumeValid = uint256S("0x00045c8a7cfd6c2d2d1bc577b6e3efb4c725c4f9a3942e33674a10d2e52f9f37"); 
 
-        /**
-         * The message start string is designed to be unlikely to occur in normal data.
-         * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
-         * a large 32-bit integer with any alignment.
-         */
+
         pchMessageStart[0] = 0x4f; //o
         pchMessageStart[1] = 0x4e; //n
         pchMessageStart[2] = 0x59; //y
@@ -157,6 +146,96 @@ public:
 };
 
 /**
+ * Testnet (v3)
+ */
+class CTestNetParams : public CChainParams {
+public:
+    CTestNetParams() {
+        strNetworkID = "test";
+        consensus.nSubsidyHalvingInterval = 1000000;
+        //consensus.BIP16Height = 0;
+        consensus.BIP34Height = 17;
+        consensus.BIP34Hash = uint256S("0x00031cedde8e78b1963e2fbf0fffebf87960d44158d6a14c34c1ff513db5030e");  // getblockhash 17
+        consensus.BIP65Height = 0; 
+        consensus.BIP66Height = 0; 
+        consensus.powLimit = uint256S("003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.nPowTargetTimespan = 61200; // 17hours
+        consensus.nPowTargetSpacing = 5;
+        consensus.fPowAllowMinDifficultyBlocks = false;
+        consensus.fPowNoRetargeting = false;
+        consensus.nRuleChangeActivationThreshold = 9180; // 
+        consensus.nMinerConfirmationWindow = 12240; // nPowTargetTimespan / nPowTargetSpacing
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+
+        // Deployment of BIP68, BIP112, and BIP113.
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1556668800;  // May 1st, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1588291200; // May 1st, 2020
+
+        // Deployment of SegWit (BIP141, BIP143, and BIP147)
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1556668800;  // May 1st, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1588291200; // May 1st, 2020
+
+        // The best chain should have at least this much work.
+        consensus.nMinimumChainWork = uint256S("0x00");
+
+        // By default assume that the signatures in ancestors of this block are valid.
+        consensus.defaultAssumeValid = uint256S("0x0");
+        //E036B884
+        pchMessageStart[0] = 0x58; //x
+        pchMessageStart[1] = 0x4e; //n
+        pchMessageStart[2] = 0x59; //y
+        pchMessageStart[3] = 0x4f; //o
+        nDefaultPort = 18323;
+        nPruneAfterHeight = 1000;
+
+        genesis = CreateGenesisBlock(1661340317, 51, 0x1f3fffff, 1, 4 * COIN);
+        
+        consensus.hashGenesisBlock = genesis.GetHash();
+        assert(consensus.hashGenesisBlock == uint256S("000d718164f326ce8385dcc4f784c95b695448564e07383dcd50edf282106c55"));
+        assert(genesis.hashMerkleRoot == uint256S("cfbe7feaf3117cfba451d93b3bfdf65d4ae05278b8cc3fa4d819f21efbf4ac94"));
+
+        vFixedSeeds.clear();
+        vSeeds.clear();
+
+        vSeeds.emplace_back("testnet.onyx.run");
+
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,115);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,137);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
+        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
+
+        bech32_hrp = "to";
+
+        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
+
+        fDefaultConsistencyChecks = false;
+        fRequireStandard = false;
+        fMineBlocksOnDemand = false;
+
+
+        checkpointData = {
+            {
+                { 0, uint256S("000d718164f326ce8385dcc4f784c95b695448564e07383dcd50edf282106c55")}
+           }
+        };
+
+        chainTxData = ChainTxData{
+            1661024450,
+            0,
+            0
+        };
+
+        /* enable fallback fee on testnet */
+        m_fallback_fee_enabled = true;
+    }
+};
+
+/**
  * Regression test
  */
 class CRegTestParams : public CChainParams {
@@ -186,10 +265,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
-        // The best chain should have at least this much work.
+
         consensus.nMinimumChainWork = uint256S("0x00");
 
-        // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
         pchMessageStart[0] = 0x58; //x
