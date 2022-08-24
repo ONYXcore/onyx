@@ -95,10 +95,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1588291200; // May 1st, 2020
 
 
-        consensus.nMinimumChainWork  = uint256S("0x0");
-// onyx-cli getblockchaininfo -> find nMinimumChainWork ("chainwork") & defaultAssumeValid ("bestblockhash")
+        consensus.nMinimumChainWork  = uint256S("0x0000000000000000000000000000000000000000000000000000000000129d08");
 
-        consensus.defaultAssumeValid = uint256S("0x00"); 
+        consensus.defaultAssumeValid = uint256S("0x00045c8a7cfd6c2d2d1bc577b6e3efb4c725c4f9a3942e33674a10d2e52f9f37"); 
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
