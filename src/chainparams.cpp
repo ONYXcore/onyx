@@ -63,12 +63,12 @@ public:
         consensus.nSubsidyHalvingInterval = 1000000;
         //consensus.BIP16Height = 0;
         consensus.BIP34Height = 17;
-        consensus.BIP34Hash = uint256S("000dcc89a291cd49d875a6132672c52805d0dbabf7b4ccacccc98ae34a04b369"); 
+        consensus.BIP34Hash = uint256S("001e8efdde8e93f13e5e2835aca2e6057436555cad9bdfe97ef5ca6a6de6af03"); 
         consensus.BIP65Height = 0; 
         consensus.BIP66Height = 0; 
         consensus.powLimit = uint256S("003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 61200; 
-        consensus.nPowTargetSpacing = 10;
+        consensus.nPowTargetSpacing = 5;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 9180; 
@@ -88,9 +88,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1588291200; // May 1st, 2020
 
 
-        consensus.nMinimumChainWork  = uint256S("0x0000000000000000000000000000000000000000000000000000000000075895");
+        consensus.nMinimumChainWork  = uint256S("0x00000000000000000000000000000000000000000000000000000000000593b0");
 
-        consensus.defaultAssumeValid = uint256S("0x0003c2b3ce7c431a3f5176fe45e93aaf4a77a82d29e7586d14c27cbd81aa5b75"); 
+        consensus.defaultAssumeValid = uint256S("0x00025187cdc3aefb721cc27aa3f0882c3bceee37a608cca10e7a6ab9574c18e3"); 
 
 
         pchMessageStart[0] = 0x4f; //o
@@ -130,8 +130,9 @@ public:
          checkpointData = {
             {
                 { 0, uint256S("000d718164f326ce8385dcc4f784c95b695448564e07383dcd50edf282106c55")},
-				{ 22, uint256S("0008b825895e15a5394854a002ee82bbb179d0421bc2bb4b1a3044eb620a4b6c")},
-				{ 100, uint256S("00034c1984fc50e278004c36a228598170544e9b92dd688c482bcc9092b0bd2e")}
+				{ 22, uint256S("002b7258fd644d40b84bdca2709adc84ef93942678f128ca0ecbe5ef1647d8c3")},
+				{ 100, uint256S("0000f77d30d1f9c0a6ceaaec6d973bddd6654fe62523d10cf64aa216c4cf8fb0")},
+				{ 200, uint256S("0008f8380da986dd2d5cf58114397aa0239131343d5cd5b9c0b8f01acf05c771")}
            }
         };
 

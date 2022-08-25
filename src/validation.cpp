@@ -1169,30 +1169,30 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
         return 0;   
      if (nHeight <= 20) {
         nSubsidy = 500000 * COIN;
-    } else if ((nHeight >= 20) && (nHeight <= 31536000)) {
-        nSubsidy = 4 * COIN;
-    } else if ((nHeight >= 31536000) && (nHeight <= 63072000)) {
-        nSubsidy = 3.8 * COIN;
-    } else if ((nHeight >= 63072000) && (nHeight <= 94608000)) {
-        nSubsidy = 3.6 * COIN;
-    } else if ((nHeight >= 94608000) && (nHeight <= 126144000)) {
-        nSubsidy = 3.4 * COIN;
-    } else if ((nHeight >= 126144000) && (nHeight <= 157680000)) {
-        nSubsidy = 3.2 * COIN;
-    } else if ((nHeight >= 157680000) && (nHeight <= 189216000)) {
-        nSubsidy = 3 * COIN;
-    } else if ((nHeight >= 189216000) && (nHeight <= 220752000)) {
-        nSubsidy = 2.8 * COIN;
-    } else if ((nHeight >= 220752000) && (nHeight <= 252288000)) {
-        nSubsidy = 2.6 * COIN;
-    } else if ((nHeight >= 252288000) && (nHeight <= 283824000)) {
-        nSubsidy = 2.4 * COIN;
-    } else if ((nHeight >= 283824000) && (nHeight <= 315360000)) {
-        nSubsidy = 2.2 * COIN;
-	} else if ((nHeight >= 315360000) && (nHeight <= 400000000)) {
+    } else if ((nHeight >= 20) && (nHeight <= 63072000)) {
         nSubsidy = 2 * COIN;
-    } else if (nHeight >= 400000000) {
-        nSubsidy = 0.2 * COIN;
+    } else if ((nHeight >= 63072000) && (nHeight <= 126144000)) {
+        nSubsidy = 1.9 * COIN;
+    } else if ((nHeight >= 126144000) && (nHeight <= 189216000)) {
+        nSubsidy = 1.8 * COIN;
+    } else if ((nHeight >= 189216000) && (nHeight <= 252288000)) {
+        nSubsidy = 1.7 * COIN;
+    } else if ((nHeight >= 252288000) && (nHeight <= 315360000)) {
+        nSubsidy = 1.6 * COIN;
+    } else if ((nHeight >= 315360000) && (nHeight <= 378432000)) {
+        nSubsidy = 1.5 * COIN;
+    } else if ((nHeight >= 378432000) && (nHeight <= 441504000)) {
+        nSubsidy = 1.4 * COIN;
+    } else if ((nHeight >= 441504000) && (nHeight <= 504576000)) {
+        nSubsidy = 1.3 * COIN;
+    } else if ((nHeight >= 504576000) && (nHeight <= 567648000)) {
+        nSubsidy = 1.2 * COIN;
+    } else if ((nHeight >= 567648000) && (nHeight <= 630720000)) {
+        nSubsidy = 1.1 * COIN;
+    } else if ((nHeight >= 630720000) && (nHeight <= 700000000)) {
+        nSubsidy = 1 * COIN;
+    } else if (nHeight >= 700000000) {
+        nSubsidy = 0.1 * COIN;
     }
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
