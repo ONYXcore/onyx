@@ -59,9 +59,9 @@ Operating System | Data Directory | Example Path
 -- | -- | --
 Windows | `%APPDATA%\ONYX\` | `C:\Users\username\AppData\Roaming\ONYX\ONYX.conf`
 Linux | `$HOME/.ONYX/` | `/home/username/.ONYX/ONYX.conf`
-macOS | `$HOME/Library/Application Support/ONYX/` | `/Users/username/Library/Application Support/ONYX/ONYX.conf`
+macOS | `$HOME/Library/Application Support/ONYX/` | `/Users/username/Library/Application Support/onyx/onyx.conf`
 
-You can find an example ONYX.conf file in [share/examples/ONYX.conf](/share/examples/ONYX.conf).
+You can find an example ONYX.conf file in [share/examples/ONYX.conf](/share/examples/onyx.conf).
 
 License
 -------
