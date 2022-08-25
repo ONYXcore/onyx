@@ -63,12 +63,12 @@ public:
         consensus.nSubsidyHalvingInterval = 1000000;
         //consensus.BIP16Height = 0;
         consensus.BIP34Height = 17;
-        consensus.BIP34Hash = uint256S("0x00031cedde8e78b1963e2fbf0fffebf87960d44158d6a14c34c1ff513db5030e"); 
+        consensus.BIP34Hash = uint256S("000dcc89a291cd49d875a6132672c52805d0dbabf7b4ccacccc98ae34a04b369"); 
         consensus.BIP65Height = 0; 
         consensus.BIP66Height = 0; 
         consensus.powLimit = uint256S("003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 61200; 
-        consensus.nPowTargetSpacing = 5;
+        consensus.nPowTargetSpacing = 10;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 9180; 
@@ -88,9 +88,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1588291200; // May 1st, 2020
 
 
-        consensus.nMinimumChainWork  = uint256S("0x0000000000000000000000000000000000000000000000000000000000129d08");
+        consensus.nMinimumChainWork  = uint256S("0x0000000000000000000000000000000000000000000000000000000000075895");
 
-        consensus.defaultAssumeValid = uint256S("0x00045c8a7cfd6c2d2d1bc577b6e3efb4c725c4f9a3942e33674a10d2e52f9f37"); 
+        consensus.defaultAssumeValid = uint256S("0x0003c2b3ce7c431a3f5176fe45e93aaf4a77a82d29e7586d14c27cbd81aa5b75"); 
 
 
         pchMessageStart[0] = 0x4f; //o
@@ -130,7 +130,8 @@ public:
          checkpointData = {
             {
                 { 0, uint256S("000d718164f326ce8385dcc4f784c95b695448564e07383dcd50edf282106c55")},
-				{ 1000, uint256S("0x00000348ac9be43bc207872004ef81cfe8068ad649e2292fb659b67bb5e9f2d2")}
+				{ 22, uint256S("0008b825895e15a5394854a002ee82bbb179d0421bc2bb4b1a3044eb620a4b6c")},
+				{ 100, uint256S("00034c1984fc50e278004c36a228598170544e9b92dd688c482bcc9092b0bd2e")}
            }
         };
 
@@ -155,7 +156,7 @@ public:
         consensus.nSubsidyHalvingInterval = 1000000;
         //consensus.BIP16Height = 0;
         consensus.BIP34Height = 17;
-        consensus.BIP34Hash = uint256S("0x00031cedde8e78b1963e2fbf0fffebf87960d44158d6a14c34c1ff513db5030e");  // getblockhash 17
+        consensus.BIP34Hash = uint256S("");  // getblockhash 17
         consensus.BIP65Height = 0; 
         consensus.BIP66Height = 0; 
         consensus.powLimit = uint256S("003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -250,7 +251,7 @@ public:
         consensus.BIP66Height = 0; 
         consensus.powLimit = uint256S("003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 61200; 
-        consensus.nPowTargetSpacing = 10;
+        consensus.nPowTargetSpacing = 5;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 9180; 
