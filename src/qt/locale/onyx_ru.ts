@@ -176,7 +176,7 @@
         <translation>Подтвердите шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR onyxS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ONX&lt;/b&gt;!</source>
         <translation>Внимание: если вы зашифруете кошелек и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ МОНЕТЫ&lt;/b&gt;!</translation>
     </message>
     <message>
