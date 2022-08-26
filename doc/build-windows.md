@@ -100,8 +100,8 @@ Once the source code is ready the build steps are below:
     ./autogen.sh # not required when building from tarball
     CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
     make -i
-	make clean
-	make -i
+	make clean  //[if error]
+	make -i  //[if error]
 
 ## Building for 32-bit Windows
 
