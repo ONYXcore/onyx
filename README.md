@@ -88,12 +88,12 @@ lots of money.
 Useful links
 ============
 
-* Website:        http://onyx.run/
-* BlockExplorer:  http://explorer.onyx.run/
-* EU Pool:        http://pool-eu.onyx.run/
-* US Pool:        http://pool-us.onyx.run/
-* AS Pool:        http://pool-as.onyx.run/
+* Website:        https://onyx.run/
+* BlockExplorer:  https://explorer.onyx.run/
+* EU Pool:        https://pool-eu.onyx.run/
+* US Pool:        https://pool-us.onyx.run/
+* AS Pool:        https://pool-as.onyx.run/
 * Discord:        https://onyx.run/discord/
-* Telegram:       http://onyx.run/telegram/
+* Telegram:       https://onyx.run/telegram/
 
 
