@@ -60,7 +60,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 1000000;
+        consensus.nSubsidyHalvingInterval = 1000000000000000;
         //consensus.BIP16Height = 0;
         consensus.BIP34Height = 17;
         consensus.BIP34Hash = uint256S("001e8efdde8e93f13e5e2835aca2e6057436555cad9bdfe97ef5ca6a6de6af03"); 
@@ -134,7 +134,8 @@ public:
 				{ 100, uint256S("0000f77d30d1f9c0a6ceaaec6d973bddd6654fe62523d10cf64aa216c4cf8fb0")},
 				{ 200, uint256S("0008f8380da986dd2d5cf58114397aa0239131343d5cd5b9c0b8f01acf05c771")},
 				{ 10000, uint256S("0005ede0680cc5e8e20b091a2cccc35747a03e44da473112a45503e92d015e7e")},
-				{ 20000, uint256S("00000c86268757019e3181e9ae0dd6a61f7a31aebeaaca0a3fb308e41b24f397")}
+				{ 20000, uint256S("00000c86268757019e3181e9ae0dd6a61f7a31aebeaaca0a3fb308e41b24f397")},
+				{ 2023774, uint256S("0000205a1ac0037811c6fd22055da59fb0e4d3a60b589202f53913b0ad609108")}
            }
         };
 
